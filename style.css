@@ -1,0 +1,7 @@
+/* Centraliza o conteúdo na tela conforme o layout do exercício */
+.container-centralizado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

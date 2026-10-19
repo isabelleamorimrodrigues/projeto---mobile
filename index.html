@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título da aplicação exigido pelo exercício -->
+  <title>Projeto 1 - Mobile</title>
+
+  <!-- Importação do Ionic via CDN -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+
+  <!-- Vinculação do arquivo CSS separado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <ion-app>
+    <!-- Cabeçalho com o título da aplicação -->
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Projeto 1 - Mobile</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <!-- Conteúdo principal -->
+    <ion-content class="ion-padding">
+      <div class="container-centralizado">
+        <!-- Botão com o texto "Alerta" -->
+        <ion-button color="primary" onclick="mostrarAlerta()">Alerta</ion-button>
+      </div>
+    </ion-content>
+  </ion-app>
+
+  <!-- Script JavaScript para exibir o ion-alert -->
+  <script>
+    async function mostrarAlerta() {
+      const alert = document.createElement('ion-alert');
+      alert.header = 'Informações';
+      alert.message = 'Isabelle Amorim - Matrícula: [01796342]';
+      alert.buttons = ['OK'];
+
+      document.body.appendChild(alert);
+      await alert.present();
+    }
+  </script>
+
+</body>
+</html>
